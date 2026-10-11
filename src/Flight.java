@@ -13,6 +13,6 @@ public abstract class Flight {
         this.baseflightCost=baseflightCost;
     }
     public abstract double flightCost();
-
+//d
 }
 

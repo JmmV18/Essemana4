@@ -7,6 +7,7 @@ public class IndirectFlight extends Flight{
     @Override
     public double flightCost() {
         return 0;
+
     }
 }
 

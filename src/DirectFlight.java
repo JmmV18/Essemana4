@@ -7,5 +7,6 @@ public class DirectFlight extends Flight{
     public double flightCost() {
         return 0;
     }
+
 }
 
