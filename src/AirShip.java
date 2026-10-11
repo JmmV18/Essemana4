@@ -1,10 +1,10 @@
-public class airShip {
+public class AirShip {
 
-    private String fabricant;
-    private String model;
+    private final String fabricant;
+    private final String model;
     private int capacity;
 
-    public airShip(String fabricant, String model, int capacity){
+    public AirShip(String fabricant, String model, int capacity){
         this.capacity= capacity;
         this.model = model;
         this.fabricant = fabricant;

@@ -1,8 +1,8 @@
-public class airCompany {
+public class AirCompany {
 
     private double profitTax;
 
-    public airCompany(int profitTax) {
+    public AirCompany(double profitTax) {
         this.profitTax = profitTax;
     }
 

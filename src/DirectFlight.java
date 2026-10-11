@@ -1,15 +1,17 @@
-public class DirectFlight extends Flight{
-    public DirectFlight(int flightum, String destination, int hourofFlight,
-                        int embarkDoor, double baseflightCost,
-                        airShip airShip, airCompany airCompany) {
+public class DirectFlight extends Flight {
 
-        super(flightum, destination, hourofFlight, embarkDoor,
-                baseflightCost, airShip,  airCompany);
+    public DirectFlight(int flightNum, String destination, int hourOfFlight,
+                        int embarkDoor, double baseFlightCost,
+                        AirShip airShip, AirCompany airCompany) {
+
+        super(flightNum, destination, hourOfFlight, embarkDoor,
+                baseFlightCost, airShip, airCompany);
     }
 
     @Override
-    public double flightCost() {
-        return 0;
+    public double getFlightCost() {
+        double profitMarkup = getBaseFlightCost() * getAirCompany().getProfitTax();
+        return getBaseFlightCost() + profitMarkup;
     }
 
 }

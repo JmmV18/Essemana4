@@ -1,18 +1,24 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IndirectFlight extends Flight {
-    List<tripStops> tp;
+ private List<TripStop> tripStops;
 
-    public IndirectFlight(int flightum, String destination, int hourofFlight, int embarkDoor, double baseflightCost,airShip airShip,airCompany airCompany) {
-        super(flightum, destination, hourofFlight, embarkDoor, baseflightCost,airShip,airCompany);
-        this.tp = new ArrayList<>();
+    public IndirectFlight(int flightNum, String destination, int hourOfFlight, int embarkDoor,
+                          double baseFlightCost, AirShip airShip, AirCompany airCompany) {
+        super(flightNum, destination, hourOfFlight, embarkDoor, baseFlightCost, airShip, airCompany);
+        this.tripStops = new LinkedList<>();
     }
 
     @Override
-    public double flightCost() {
-        return 0;
-
+    public double getFlightCost() {
+        double baseCost = getBaseFlightCost();
+        double airlineProfit = baseCost * getAirCompany().getProfitTax();
+        double totalRefuelFee = 0.0;
+        for (TripStop stop : tripStops) {
+            totalRefuelFee += stop.getRefuelFee();
+        }
+        return baseCost + airlineProfit + totalRefuelFee;
     }
 }
 
