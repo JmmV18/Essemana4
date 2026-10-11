@@ -1,18 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
+public class IndirectFlight extends Flight{
 
-public class IndirectFlight extends Flight {
-    List<tripStops> tp;
-
-    public IndirectFlight(int flightum, String destination, int hourofFlight, int embarkDoor, double baseflightCost) {
-        super(flightum, destination, hourofFlight, embarkDoor, baseflightCost);
-        this.tp = new ArrayList<>();
+    public IndirectFlight(int flightum, String destination, int hourofFlight,
+                          int embarkDoor, double baseflightCost,
+                          airShip airShip, airCompany airCompany) {
+        super(flightum, destination, hourofFlight, embarkDoor,
+                baseflightCost, airShip,  airCompany);
     }
 
     @Override
     public double flightCost() {
         return 0;
-
     }
 }
 
