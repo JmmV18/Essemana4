@@ -1,11 +1,11 @@
 public abstract class Flight {
-    int flightnum;
-    String destination;
-    int hourofFlight;
-    int embarkDoor;
-    double baseflightCost;
-    airShip ship;
-    airCompany company;
+    private int flightnum;
+    private String destination;
+    private int hourofFlight;
+    private int embarkDoor;
+    private double baseflightCost;
+    private airShip ship;
+    private airCompany company;
 
     public Flight ( int flightum, String destination, int hourofFlight, int embarkDoor, double baseflightCost){
         this.flightnum=flightum;
