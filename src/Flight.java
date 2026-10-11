@@ -4,6 +4,8 @@ public abstract class Flight {
     int hourofFlight;
     int embarkDoor;
     double baseflightCost;
+    airShip ship;
+    airCompany company;
 
     public Flight ( int flightum, String destination, int hourofFlight, int embarkDoor, double baseflightCost){
         this.flightnum=flightum;
@@ -13,6 +15,6 @@ public abstract class Flight {
         this.baseflightCost=baseflightCost;
     }
     public abstract double flightCost();
-//d
+
 }
 
